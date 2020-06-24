@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: honeydew;
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+        }
+
+        header::before {
+            background: url('img/training.jpg') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        .left {
+            display: inline-block;
+            /* border:2px solid red; */
+            left: 34px;
+            top: 20px;
+            position: absolute;
+        }
+
+        .left img {
+            width: 60px;
+            filter: invert(100%);
+            align-self: center;
+            margin: 0px 34px;
+        }
+
+        .left div {
+            text-align: center;
+            font-size: 15px;
+            text-decoration: underline overline;
+            padding: 0px 4px;
+        }
+
+        .mid {
+            display: block;
+            /* border:2px solid green; */
+            width: 40%;
+            margin: 20px auto;
+        }
+
+        .right {
+            right: 34px;
+            top: 32px;
+            position: absolute;
+            display: inline-block;
+            /* border:2px solid yellow */
+        }
+
+        .navbar {
+            display: inline-block;
+            color: rgb(217, 235, 217);
+            /* background-color: rgb(66, 119, 66); */
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        .navbar li a {
+            color: honeydew;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a:active {
+            text-decoration: underline;
+            color: gray;
+        }
+
+        .btn {
+            margin: 0px 9px;
+            color: white;
+            background-color: black;
+            padding: 4px 14px;
+            border: 2px solid rgb(255, 236, 236);
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+        }
+
+        .btn:hover {
+            background-color: rgb(83, 83, 83);
+        }
+
+        .container1 {
+            margin-top: 172px;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .card {
+            padding: 23px 34px;
+            border: 2px solid white;
+            margin: 10%;
+            background-color: rgb(174, 174, 177);
+            box-shadow: 10px 23px 23px gray;
+            position: relative;
+            animation-name: ltr;
+            animation-duration: 2s;
+        }
+
+        @keyframes ltr {
+            from {
+                width: 0px
+            }
+
+            to {
+                width: 133px;
+            }
+        }
+
+        .links {
+            width: 97%;
+            height: 50vh;
+            border: 2px solid red;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .boxes {
+            padding: 23px 34px;
+            height: 30px;
+            width: 30px;
+
+        }
+
+        .h-primary {
+            font-size: 3.8rem;
+            padding: 12px;
+            color: black;
+        }
+
+        .card h1 {
+            text-decoration: underline;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+
+        .center {
+            text-align: center;
+        }
+        .card p{
+            text-align: center;
+            padding: 20px;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+    margin: 0px 9px;
+            color: white;
+            background-color: black;
+            padding: 4px 14px;
+            border: 2px solid rgb(255, 236, 236);
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(83, 83, 83);
+}
+input[type=reset] {
+    margin: 0px 9px;
+            color: white;
+            background-color: black;
+            padding: 4px 14px;
+            border: 2px solid rgb(255, 236, 236);
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+}
+
+input[type=reset]:hover {
+    background-color: rgb(83, 83, 83);
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/bg.png" alt="">
+            <div>Harshit Fitness</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call us now</button>
+            <button class="btn">Email us</button>
+        </div>
+    </header>
+
+    <div class="container1">
+        <div class="card center" id="card-1">
+            <h1>Card1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
+                ex officia possimus expedita. Reprehenderit distinctio, accusamus quaerat
+                voluptatum iste delectus atque ipsa commodi non labore incidunt ab odio ut!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, molestias?
+            </p>
+        </div>
+        <div class="card center" id="card-2">
+            <h1>Card2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
+                ex officia possimus expedita. Reprehenderit distinctio, accusamus quaerat
+                voluptatum iste delectus atque ipsa commodi non labore incidunt ab odio ut!
+            </p>
+        </div>
+        <div class="card center" id="card-3">
+            <h1>Card3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam in
+                ex officia possimus expedita. Reprehenderit distinctio, accusamus quaerat
+                voluptatum iste delectus atque ipsa commodi non labore incidunt ab odio ut!
+            </p>
+        </div>
+    </div>
+    <section id="client-section">
+        <h1 class="h-primary center underline">Our Sponsors</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="img/logo1.png" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="img/logo2.png" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="img/logo4.png" alt="Our client">
+            </div>
+            <div class="client-item">
+                <img src="img/logo3.png" alt="Our client">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="center h-primary">
+            <div style="text-align:center">
+                <h3 class="underline">Contact Us</h3>
+                <p style="font-size: 1.3rem; margin: 20px 20px; text-decoration:none;">Swing by for a cup of coffee, or leave us a message:</p>
+            </div>
+            <div class="row">
+              <div class="column">
+                <img src="img/map.jpg" style="width:100%">
+              </div>
+              <div class="column">
+                <form action="#" style="font-size: 0.8rem;text-align: left;">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="india">India</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                  <input type="reset" value="Reset">
+                </form>
+              </div>
+            </div>
+          </div>
+    </section>
+</body>
+</html>
